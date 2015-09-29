@@ -9,5 +9,6 @@
   roles:
    - geerlingguy.git
    - geerlingguy.nodejs
+   - martinmicunda.ionic
    - dev
    - prod

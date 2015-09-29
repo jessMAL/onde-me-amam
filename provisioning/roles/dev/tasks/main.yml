@@ -1,15 +1,3 @@
 ---
 - name: Install source code compilation tools
   apt: name=build-essential state=present
-
-- name: Registry jspm for npm.
-  command: "jspm config registries.github.auth {{ lookup('env', 'JSPM_GITHUB_AUTH_TOKEN') }}"
-  args:
-    chdir: /home/vagrant/app/client
-  sudo: no
-
-- name: Install "jspm" packages.
-  command: "jspm install -y"
-  args:
-    chdir: /home/vagrant/app/client
-  sudo: no

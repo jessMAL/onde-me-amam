@@ -6,10 +6,8 @@ nodejs_npm_global_packages:
   - name: yo
   # Install "yeoman-node".
   - name: generator-node
-  # Install "yeoman-aurelia".
-  - name: generator-aurelia
-  # Install "jspm".
-  - name: jspm
+  # Install "yooman-ionic"
+  - name: generator-ionic
   # Install "mocha".
   - name: mocha
   # Install "gulp".
@@ -17,3 +15,5 @@ nodejs_npm_global_packages:
 workspace: /root
 git_packages:
   - git
+ionic_version: 1.1.0
+cordova_version: 5.1.1
