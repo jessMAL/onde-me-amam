@@ -1,4 +1,4 @@
-![alt text](https://github.com/brunoleite/onde-me-amam/resources/marcaweb.png "Onde Me Amam")
+![alt text](https://github.com/brunoleite/onde-me-amam/blob/master/resources/marcaweb.png "Onde Me Amam")
 
 # Onde Me Amam
 
