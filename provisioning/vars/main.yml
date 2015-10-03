@@ -16,4 +16,4 @@ workspace: /root
 git_packages:
   - git
 ionic_version: 1.1.0
-cordova_version: 5.1.1
+cordova_version: 4.3.0 
