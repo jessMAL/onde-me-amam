@@ -1,80 +1,96 @@
-# word-clouds
+![alt text](https://github.com/brunoleite/onde-me-amam/resources/marcaweb.png "Onde Me Amam")
 
-This is a project to process text, in English and Portuguese, and generates word clouds.
+# Onde Me Amam
 
-## Motivation
+Este é um projeto para classificar lugares para o público LGBT.
 
-I have decided to create this app, since I could not find an app that I could put move idioms. Also, I had problems with stop words and similar words polluting the word cloud.
-Another motivation was to study JavaScript (Nodejs, Aurelia and D3), Continous Integration and environment provisioning.
+## Motivação
 
-## Installation
+O projeto nasceu no evento Rails Girls BH 2015. O intuito é criar uma aplicação onde o público LGBT seja capaz de classificar, positivamente ou negativamente, locais onde frequentam.
 
-### Requirements
+## Instalação
+
+### Pré-requisitos
 * [VirtualBox](https://www.virtualbox.org/wiki/Download_Old_Builds_4_3) - 4.3.30
-* [Vagrant](https://www.vagrantup.com/downloads.html) - 1.7.4 or higher
-* [ansible](http://www.ansible.com/) - 1.9.3 or higher
-* Configures the environment variable JSPM_GITHUB_AUTH_TOKEN with a [github personal access token](https://github.com/settings/tokens)(don't forget to mark access to repos). The token needs to be [encoded using Base64](https://www.base64encode.org/). The project uses [jspm](http://jspm.io/) which needs to access github, because it this configuration is required.
+* [Vagrant](https://www.vagrantup.com/downloads.html) - 1.7.4 ou superior
+* [ansible](http://www.ansible.com/) - 1.9.3 ou superior
 
-### Setup
-- Clone this repository to your local drive:
+### Instalação
+- Faça o clone desse repositório para seu disco local:
 ```
-git clone git@github.com:brunoleite/word-clouds.git
-```
-
-- Go to /word-clouds:
-```
-cd word-clouds
+git clone git@github.com:brunoleite/onde-me-amam.git
 ```
 
-- Install required Ansible roles: 
+- Vá para o diretório /onde-me-amam:
+```
+cd onde-me-amam
+```
+
+- Instale as dependência do Ansible:
 ```
 ansible-galaxy install -r requirements.txt
 ```
 
-- Create a Vagrant machine (it may take a while): 
+- Crie uma máquina virtual utilizando o Vagrant (pode demorar): 
 ```
 vagrant up
 ```
 
-- Access the virtual machine:
+- Acesse a máquina virtual:
 ```
 vagrant ssh
 ```
 
-- Go to /app:
+- Vá para o diretório /app:
 ```
 cd app
 ```
 
-- Run the app:
+### Iniciando o servidor
+
+- Execute a aplicação:
 ```
 npm start
 ```
 
-The app should be available in `localhost:8000`, accessed from your local machine.
-## Tests
+A aplicação deveria estar disponível em `localhost:8000`, acessada da sua máquina local.
 
-Describe and show how to run the tests with code examples.
+### Iniciando o cliente
 
-## Continous Integration
+- Vá para o diretório /client:
+```
+cd client
+```
 
-This project uses [Snap-CI](https://snap-ci.com/) to perform Continous Integration you can check the [pipeline](https://snap-ci.com/brunoleite/word-clouds/branch/master). Every commint pushed to master is going to publish a new version. 
+- Execute a aplicação:
+```
+ionic serve
+```
 
-## Production
+Os dados para acesso a aplicação mobile será exibida no console.
 
-The project is published in [heroku](https://www.heroku.com/) on [word-clouds](http://word-clouds.heroku.com) and uses the [custom build pack for nodejs and jspm](https://github.com/brunoleite/heroku-buildpack-nodejs-jspm).
+## Testes
 
-## Contributors
+Descrever como será os testes.
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## Integração Contínua
 
-Also, fell free to registry any idea or defect in [github issues](https://github.com/brunoleite/word-clouds/issues)
-You can reach me out on twitter [@bleitea](http://twitter.com/bleitea)
+Esse projeto usa [Snap-CI](https://snap-ci.com/) para Integração Contínua, você pode ver o [pipeline](https://snap-ci.com/brunoleite/onde-me-amam/branch/master). 
+
+## Produção
+
+Descrever como será o acesso a produção.
+
+## Contribuições
+
+1. Faça o fork do projeto
+2. Crie sua feature branch (`git checkout -b my-new-feature`)
+3. Faça commit das suas mudanças (`git commit -am 'Adiciona uma feature'`)
+4. Faça o push para a branch (`git push origin my-new-feature`)
+5. Crie um novo Pull Request
+
+Caso tenha alguma sugestão, por favor, registre em [github issues](https://github.com/brunoleite/onde-me-amam/issues)
 
 ## License
 
-This project rocks and uses the [MIT LICENSE](https://opensource.org/licenses/MIT).
+Este projeto utiliza a licença [MIT](https://opensource.org/licenses/MIT).
