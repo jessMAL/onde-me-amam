@@ -1,6 +1,18 @@
 ---
-- name: Install npm packages the server side.
+- name: Install npm packages for server side.
   command: "npm install"  
   args:
     chdir: /home/vagrant/app
+  sudo: no
+
+- name: Install npm packages for client side.
+  command: "npm install"
+  args:
+    chdir: /home/vagrant/app/client
+  sudo: no
+
+- name: Install gulp packages for client side.
+  command: "gulp install"
+  args:
+    chdir: /home/vagrant/app/client
   sudo: no
